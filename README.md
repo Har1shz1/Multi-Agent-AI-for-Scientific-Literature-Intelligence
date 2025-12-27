@@ -1,83 +1,94 @@
-Autonomous Agentic AI System for Scientific Literature Intelligence & Research Gap Discovery
+🧠 Autonomous Agentic AI System for Scientific Literature Intelligence & Research Gap Discovery
 
-An end-to-end multi-agent AI system that simulates how researchers explore literature, analyze methodologies, identify trends, and uncover open research problems.
+A research-grade multi-agent AI system that simulates how researchers explore literature, analyze methodologies, synthesize trends, and identify open research problems.
 
-🚀 Overview
+🚀 Introduction
 
-Conducting a high-quality literature review is a time-consuming and cognitively demanding process involving paper discovery, methodology comparison, trend analysis, and identification of research gaps.
+Performing a high-quality literature review is a complex and time-consuming process involving:
 
-This project introduces an autonomous, agent-based AI system that models the academic research workflow using multiple collaborating AI agents. Each agent is responsible for a specific reasoning task, enabling structured, interpretable, and scalable research intelligence.
+Discovering relevant papers
 
-Instead of a single chatbot, the system operates as a team of specialized AI agents, closely mirroring how real research groups function.
+Understanding and comparing methodologies
 
-✨ Key Features
+Identifying trends in the field
 
-🤖 Multi-Agent Architecture using CrewAI
+Finding unexplored research gaps
 
-📚 Automated Literature Discovery via Serper (Google Search API) and arXiv
+This project introduces an autonomous, agent-based AI system that models this academic research workflow using collaborating AI agents.
+Instead of relying on a single LLM prompt, the system decomposes research into specialized reasoning stages, closely mirroring how real research groups operate.
 
-🧩 Role-Specific Reasoning Agents for different research stages
+✨ Key Highlights
 
-🔗 Task Chaining & Prompt-Oriented Orchestration
+🤖 Agentic AI architecture using CrewAI
 
-🔍 Research Gap Identification & Experiment Suggestions
+📚 Automated literature discovery via Serper (Google Search API) and arXiv
 
-⚡ Fast LLM Inference using Groq-hosted LLaMA 3.1 models
+🧩 Role-specific reasoning agents for different research stages
+
+🔗 Task chaining and prompt-driven orchestration
+
+🔍 Automated research gap discovery and experiment suggestions
+
+⚡ Fast inference using Groq-hosted LLaMA 3.1 models
 
 🧠 System Architecture
-Agent Roles
+Overall Architecture
+flowchart TD
+    U[User Research Topic] --> LM[Literature Miner Agent]
+    LM --> MA[Methodology Analyzer Agent]
+    MA --> TS[Trend Synthesizer Agent]
+    TS --> RG[Research Gap Agent]
+
+    LM -->|Search Queries| S[Serper API]
+    LM -->|Scholarly Metadata| A[arXiv]
+
+    S --> LM
+    A --> LM
+
+    RG --> O[Final Research Intelligence Output]
+
+🧩 Agent Roles & Responsibilities
+graph LR
+    subgraph Agentic_AI_System
+        LM[Literature Miner]
+        MA[Methodology Analyzer]
+        TS[Trend Synthesizer]
+        RG[Research Gap Agent]
+    end
+
+    LM --> MA --> TS --> RG
+
 Agent	Responsibility
 Literature Miner	Discovers relevant research papers and extracts key contributions
 Methodology Analyzer	Compares techniques, models, datasets, and evaluation strategies
 Trend Synthesizer	Identifies dominant patterns and emerging research directions
 Research Gap Agent	Proposes under-explored problems and potential experiments
-🔁 Agent Workflow
-User Input (Research Topic)
-        ↓
-Literature Miner
-        ↓
-Methodology Analyzer
-        ↓
-Trend Synthesizer
-        ↓
-Research Gap Agent
-        ↓
-Final Research Intelligence Output
+🔁 Research Reasoning Pipeline
+sequenceDiagram
+    participant User
+    participant LM as Literature Miner
+    participant MA as Methodology Analyzer
+    participant TS as Trend Synthesizer
+    participant RG as Research Gap Agent
 
+    User->>LM: Provide Research Topic
+    LM->>MA: Paper Summaries
+    MA->>TS: Method Comparisons
+    TS->>RG: Identified Trends
+    RG->>User: Research Gaps & Experiment Ideas
 
-Each agent consumes the output of the previous agent, ensuring coherent reasoning flow and interpretable intermediate results.
-
-🖼️ Architecture Diagram (Add Image Here)
-
-📌 Replace this placeholder with a diagram image (/assets/architecture.png)
-
-+-------------------+
-|   User Input      |
-+-------------------+
-          |
-          v
-+-------------------+
-| Literature Miner  |
-+-------------------+
-          |
-          v
-+------------------------+
-| Methodology Analyzer   |
-+------------------------+
-          |
-          v
-+-------------------+
-| Trend Synthesizer |
-+-------------------+
-          |
-          v
-+-------------------+
-| Research Gap Agent|
-+-------------------+
+📊 Data Flow
+flowchart LR
+    Input[Research Topic] --> Search[Web & Scholarly Search]
+    Search --> Papers[Research Papers & Abstracts]
+    Papers --> Analysis[Methodology Analysis]
+    Analysis --> Trends[Trend Extraction]
+    Trends --> Gaps[Research Gap Identification]
+    Gaps --> Output[Suggested Research Directions]
 
 🛠️ Tech Stack
 
-Language: Python
+Programming Language: Python
 
 Agent Framework: CrewAI
 
@@ -85,9 +96,9 @@ LLMs: Groq (LLaMA 3.1 family)
 
 Search & Retrieval: Serper API, ScrapeWebsiteTool
 
-Scholarly Data: arXiv (open-access)
+Scholarly Sources: arXiv (open-access)
 
-Orchestration: Task chaining & prompt engineering
+Reasoning: Prompt engineering & task chaining
 
 ⚙️ Installation & Setup
 1️⃣ Clone the Repository
@@ -103,7 +114,7 @@ export GROQ_API_KEY="your_groq_api_key"
 export SERPER_API_KEY="your_serper_api_key"
 
 
-(Or set them inside the notebook / script.)
+(Alternatively, set them inside the notebook.)
 
 ▶️ Usage
 Provide a Research Topic
@@ -111,62 +122,58 @@ result = research_crew.kickoff(
     inputs={"topic": "Large Language Models for Code Generation"}
 )
 
-Display Output
+View Output
 print(result.raw)
 
-📊 Example Output
+📌 Example Output
 
 The system produces:
 
-📄 Summary of recent papers
+📄 Summaries of recent papers
 
-🔬 Comparison of methodologies
+🔬 Comparative analysis of methodologies
 
 📈 Identified research trends
 
-❓ Clear research gaps with experiment ideas
+❓ Clear research gaps with experiment-level suggestions
 
 Example:
 
-Emerging Gap:
+Research Gap:
 Most current LLM-based code generation systems focus on benchmark accuracy,
 while robustness to adversarial prompts remains under-explored.
+
 Suggested Experiment:
-Evaluate model robustness using synthetically perturbed code prompts.
-
-📸 Sample Output Screenshot (Add Image)
-
-📌 Add screenshots here (/assets/output_example.png)
+Evaluate model robustness using synthetically perturbed code prompts
+and measure performance degradation.
 
 🎓 Why This Project Matters
 
-Demonstrates agentic AI system design, not just prompt usage
+Demonstrates agent-based AI system design, not simple prompt usage
 
-Mirrors real academic research workflows
+Models real academic research workflows
 
-Emphasizes reasoning, orchestration, and interpretability
+Emphasizes structured reasoning and interpretability
 
 Uses ethical, open-access data sources
 
-Extensible to:
+Highly relevant to:
 
-Survey writing
+Graduate research
 
-Research planning
+Agentic AI systems
 
-Systematic reviews
-
-Domain-specific research intelligence
+Research automation and decision support
 
 🚫 Limitations
 
 Does not replace human researchers
 
-Does not guarantee novel discoveries
+Does not automatically publish research
 
-Provides decision support, not autonomous research publication
+Provides decision support, not guaranteed discoveries
 
-🔮 Future Extensions
+🔮 Future Work
 
 📌 Citation graph analysis
 
