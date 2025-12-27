@@ -175,12 +175,6 @@ and measure performance degradation.
 
 ---
 
-## 📄 Resume / SOP Description
-
-Developed an autonomous multi-agent AI system that simulates the academic research workflow, enabling literature discovery, methodology analysis, trend synthesis, and research gap identification using agent-based reasoning.
-
----
-
 ## ⭐ Acknowledgements
 
 - CrewAI for agent orchestration  
