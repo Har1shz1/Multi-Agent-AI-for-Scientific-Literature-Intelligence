@@ -46,3 +46,14 @@ flowchart TD
     A --> LM
 
     RG --> O[Final Research Intelligence Output]
+
+### Overall Architecture
+graph LR
+    subgraph Agentic_AI_System
+        LM[Literature Miner]
+        MA[Methodology Analyzer]
+        TS[Trend Synthesizer]
+        RG[Research Gap Agent]
+    end
+
+    LM --> MA --> TS --> RG
