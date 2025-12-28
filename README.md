@@ -144,8 +144,6 @@ and measure performance degradation.
 <img width="1636" height="662" alt="image" src="https://github.com/user-attachments/assets/8e4cc3d4-426f-41cc-8156-b54ff19ef5f5" />
 <img width="1752" height="591" alt="image" src="https://github.com/user-attachments/assets/ed2cfae6-93df-4c36-8d7d-21d78b406f30" />
 <img width="1692" height="568" alt="image" src="https://github.com/user-attachments/assets/16656248-ac39-423b-bf07-d65a34c571f3" />
-<img width="1756" height="665" alt="image" src="https://github.com/user-attachments/assets/c5f74959-b0bd-47d7-86af-0382b5f7e378" />
-<img width="1751" height="575" alt="image" src="https://github.com/user-attachments/assets/b914b90c-6e59-4918-8107-ef385cf51bbf" />
 ---
 
 ## 🎓 Why This Project Matters
