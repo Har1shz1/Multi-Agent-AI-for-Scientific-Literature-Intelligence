@@ -161,7 +161,6 @@ and measure performance degradation.
 
 - Does not replace human researchers  
 - Does not automatically publish research  
-- Provides decision support, not guaranteed discoveries  
 
 ---
 
@@ -171,7 +170,6 @@ and measure performance degradation.
 - PDF-level paper parsing  
 - Multi-topic batch analysis  
 - Evaluation against expert-written surveys  
-- Integration with LaTeX / Overleaf  
 
 ---
 
