@@ -1,4 +1,4 @@
-# 🧠 Autonomous Agentic AI System for Scientific Literature Intelligence & Research Gap Discovery
+<img width="1751" height="575" alt="image" src="https://github.com/user-attachments/assets/97d455c9-0bd7-4e5d-abf5-6cc796db4b68" /># 🧠 Autonomous Agentic AI System for Scientific Literature Intelligence & Research Gap Discovery
 
 > A research-grade multi-agent AI system that simulates how researchers explore literature, analyze methodologies, synthesize trends, and identify open research problems.
 
@@ -139,6 +139,14 @@ while robustness to adversarial prompts remains under-explored.
 Suggested Experiment:
 Evaluate model robustness using synthetically perturbed code prompts
 and measure performance degradation.
+
+<img width="1636" height="662" alt="image" src="https://github.com/user-attachments/assets/8e4cc3d4-426f-41cc-8156-b54ff19ef5f5" />
+<img width="1752" height="591" alt="image" src="https://github.com/user-attachments/assets/ed2cfae6-93df-4c36-8d7d-21d78b406f30" />
+<img width="1753" height="646" alt="image" src="https://github.com/user-attachments/assets/c9a2d1f8-00cf-40b4-b302-46be043cf0ce" />
+<img width="1692" height="568" alt="image" src="https://github.com/user-attachments/assets/16656248-ac39-423b-bf07-d65a34c571f3" />
+<img width="1756" height="665" alt="image" src="https://github.com/user-attachments/assets/c5f74959-b0bd-47d7-86af-0382b5f7e378" />
+<img width="1751" height="575" alt="image" src="https://github.com/user-attachments/assets/b914b90c-6e59-4918-8107-ef385cf51bbf" />
+
 ```
 
 ---
